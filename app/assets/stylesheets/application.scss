@@ -18,6 +18,13 @@
 /* imports the bootstrap framework */
 @import "bootstrap";
 .btn-primary {
-  background-color: darkolivegreen!important;
+  background-color: darkslateblue!important;
   color:ghostwhite!important;
+}
+a.navbar-brand  {
+  color: darkblue!important;
+}
+.navbar-dark
+{
+  background-color: darkslateblue!important;
 }

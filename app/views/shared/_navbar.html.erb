@@ -4,9 +4,9 @@
     <%= link_to back_masquerade_path(current_user) do %><%= icon("fas", "times") %> Logout <% end %>
   </div>
 <% end %>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container mx-auto">
-    <%= link_to "SaaS Rocket", root_path, class: "navbar-brand" %>
+    <%= link_to image_tag "Logo.png", width: '150', class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,7 +16,7 @@
       <ul class="navbar-nav">
         <%= form_tag(root_path, :method => "get",
                      class: 'navbar-form navbar-left') do %>
-          <div class="input-group mt-1">
+          <div class="input-group">
             <%= text_field_tag :title, params[:title], placeholder: "Search By Title", class: "form-control" %>
           </div>
         <% end %>
@@ -45,8 +45,8 @@
 
 
         <% else %>
-          <li class="nav-item mx-1"><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success nav-link mx-2" %></li>
-          <li class="nav-item mx-1"><%= link_to "Login", new_user_session_path, class: "btn btn-primary nav-link" %></li>
+          <li class="nav-item mx-1"><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-info nav-link mx-2" %></li>
+          <li class="nav-item mx-1"><%= link_to "Login", new_user_session_path, class: "btn btn-warning nav-link" %></li>
         <% end %>
       </ul>
     </div>
